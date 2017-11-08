@@ -16,7 +16,7 @@ import com.intellect.util.ValidateUtil;
 public class UserController {
 
 	@RequestMapping(value="/create",method = RequestMethod.GET,headers="Accept=application/json")
-	 public Response createUser(User user) {
+	 public Response createUser(@RequestBody User user) {
 	 
 		
 		String output=null;
@@ -34,7 +34,7 @@ public class UserController {
 	 }
 	
 	@RequestMapping(value="/update/{userId}", method = RequestMethod.GET,headers="Accept=application/json")
-	 public Response updateUser(@PathVariable String userId,User user) {
+	 public Response updateUser(@PathVariable String userId,@RequestBody User user) {
 		List<User> userList = UserCollection.getList();
 		
 		for (User temp : userList) {
