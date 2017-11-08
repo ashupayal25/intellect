@@ -12,7 +12,7 @@ import com.intellect.model.User;
 import com.intellect.model.UserCollection;
 import com.intellect.util.ValidateUtil;
 
-@Controller
+@RestController
 public class UserController {
 
 	@RequestMapping(value="/create",method = RequestMethod.GET,headers="Accept=application/json")
